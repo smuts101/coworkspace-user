@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="holder">
+  
+<div class="bottom">
+  <ion-icon [routerLink]="'/working-spaces'" style="font-size: 26px;position: absolute;left: 3%;top:5%; background-color:black;color:white;border-radius:50%" name="chevron-back-outline"></ion-icon>
+  <p style="height:3%;font-size: 20px;font-weight: bold;color: black;left: 3%;position: absolute;bottom: 10%;">Manage Your Account</p>
+  <ion-avatar style="position: absolute;right: 5%;bottom: 5%;">
+    <img src="assets/profilepic.jpg">
+  </ion-avatar>
+</div>
+<p style="font-size:14px;font-weight: bold;position: absolute;left: 10%;top: 20%;">hi lets sort out your profile</p>
+<div id="profile"> 
+  <p style="color: white;font-size: 15px;font-weight: bold;">Profile</p>
+  <ion-icon [routerLink]="'/profile'" style="position: absolute;left: 5%; font-size: 25px; color: white;" name="person"></ion-icon>
+</div>
+<div id="favourites">
+  <ion-icon  [routerLink]="'/favourites'" style="position: absolute;left: 5%; font-size: 25px; color: white;" name="star"></ion-icon>
+  <p  style="color: white;font-size: 15px;font-weight: bold;">Favourites</p>
+</div>
+<div id="history">
+  <p style="color: white;font-size: 15px;font-weight: bold;">history</p>
+  <ion-icon style="position: absolute;left: 5%; font-size: 25px; color: white;" name="checkbox"></ion-icon>
+</div>
+<p style="font-size:14px;font-weight: bold;position: absolute;left: 10%;bottom: 30%;">Your dashboard</p>
+<p style="font-size:12px;position: absolute;left: 10%;bottom: 27%;">view your stats and preview Previous spaces</p>
+<div id="stats">
+  <h4 style="color: black;position: absolute;left: 5%;">Previous bookings</h4>
+  <div id="stat">
+    <ion-card  style="background-color: #1a0c25;width:100%; height: 100%;font-size:30px;font-weight: bold;display: flex;justify-content: center;align-items: center;">
+      <p *ngIf="this.oldBookNum!=0" style=" color: white;">{{this.oldBookNum}}</p>
+      <p *ngIf="this.oldBookNum==0" style="color: white;">{{this.oldBookNum}}</p>
+     
+     </ion-card>
+  </div>
+</div> 
+
+  </div>
+</ion-content>

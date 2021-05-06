@@ -1,0 +1,23 @@
+.holder{
+    width: 100%;
+    height: 100%;display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#262A41 ;
+
+}
+
+#cards{
+
+    width: 90%;
+    height: auto;
+    background-color: white;
+    box-shadow: 2px 2px white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    
+}
+p{ width: 100% ;height: 15px;}

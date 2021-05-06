@@ -1,0 +1,79 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>view-gallery</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="holder">
+    <ion-icon style="position: absolute;left: 5%;top: 3%;font-size: 30px;" (click)="back()" name="chevron-back-outline"></ion-icon>
+    <div class="top"> 
+      <img style="width: 100%;height: 100%;opacity: 10%;border-radius: 20px;" src="assets/bgg.jpg" alt="">
+      <p style="color: white;font-weight: bold;position: absolute;left: 5%;">Gallery <br> ceated by you</p>
+    </div>
+    <ion-icon style="position: absolute;top: 2%;left: 3%;font-size: 25%;color: black;" name="chevron-back-outline"></ion-icon>
+    <p style="position: absolute;top: 30%;color: gray;font-weight: bold;">Your Pictures</p>
+
+    <div class="vertical"></div>
+    <div class="bottom">
+      <div class="in">
+        <ion-grid style=" display: grid;
+        grid-template-columns: auto auto auto; "   *ngFor="let x of gallaryArray;let i = index" >
+          <ion-row style="border-style: solid;border-width: 2px;border-color: white;" *ngFor="let k of x.image">
+            <img [src]="k">
+          </ion-row>
+          </ion-grid>
+
+      </div>
+     
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- 
+   <div class="container">
+    <div class="wrapper">
+      <div class="image">
+        <img style="width: 60%; height: 40%; border-radius: 50%;" src="assets/bg.jpg" >
+      </div>
+      <div class="text">
+      <h1 style="font-size: 20px;">Profile Name</h1>
+      <p style="font-size: 14px; margin-top: -5px;">A brief description of yourself</p>
+      </div>
+
+  <ion-grid>
+    <ion-row class="images"  style="width: 30%; height: 5%;" *ngFor="let x of gallaryArray">
+      <ion-col size="13">
+       <img [src]="x.image">
+       </ion-col>
+
+       <ion-col size="13">
+        <img [src]="x.image">
+        </ion-col> 
+        
+        <ion-col size="13">
+          <img [src]="x.image">
+          </ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+  </div>  -->
+  <div id="footer">
+   
+    <ion-icon (click)="back()" style="font-size: 26px;position: absolute;left: 2%;" name="chevron-back-outline"></ion-icon>
+     <!-- <ion-icon style="font-size: 26px;position: absolute;left: 2%;" name="chevron-back-outline"></ion-icon> -->
+     <ion-icon style="font-size: 26px;position: absolute;left: 27%;"  [routerLink] = "['/view-gallary',this.favSpace]" name="images-outline"></ion-icon>
+     <ion-icon *ngIf="this.account.getUserSession()" [routerLink]="'/user-landing'" style="font-size: 26px;" name="person-circle-outline"></ion-icon>
+     <ion-icon  style="font-size: 26px;position: absolute;right: 27%;" [routerLink]="'/favourites'" name="bookmarks-outline"></ion-icon>
+
+     <ion-icon style="font-size: 26px;position: absolute;right: 2%;" name="chevron-forward-outline"></ion-icon>
+   </div>
+
+</ion-content>

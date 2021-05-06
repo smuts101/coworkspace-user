@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="holder">
+<div id="navbar">
+  <p style="font-size: 20px; font-weight: bold;color: black;position: absolute;left: 3%;">Current Profile</p>
+  <ion-icon [routerLink]="'/working-spaces'" style="font-size: 26px;position: absolute;left: 3%;top:5%; background-color:black;color:white;border-radius:50%" name="chevron-back-outline"></ion-icon>
+</div>
+
+<div  *ngFor="let x of array" id="aboutme">
+  <ion-row>
+    <span style="font-weight: bold;font-size: 20px;position: absolute;top: 3%;left: 5%;">AboutUs </span>
+  </ion-row>
+  <ion-row>
+      <span style="position: absolute;top: 15%;left: 5%;"><b>phone: </b> {{x.phone}}  </span>  
+    </ion-row>
+    <ion-row>
+      <span  style="position: absolute;top: 25%;left: 5%;"><b>Email: </b> {{x.email}} </span>  
+
+    </ion-row>
+
+    <ion-row>
+      <span  style="position: absolute;top: 35%;left: 5%;"><b>Address : </b> {{x.address}} </span>  
+
+    </ion-row>
+    
+</div>
+<ion-avatar *ngFor="let x of array" style="position: absolute;bottom: 25%;left: 7%;z-index: 1;">
+  <img [src]="x.img_profile">
+</ion-avatar>
+
+<div *ngFor="let x of array"  class="bottom">
+  <ion-icon  [routerLink]="'/profile-add'" style="font-size: 35px;position: absolute;right: 5%;bottom: 5%;background-color: white;color: #9010F5;border-radius: 50%;" name="add-circle"></ion-icon>
+  <p style="position:absolute; font-weight:bold;color:white;font-size: 20px;top: 15%;left: 5%;"> {{x.name}}  {{x.surname}}</p> <br> <br>
+
+</div>
+  </div>
+
+
+</ion-content>
